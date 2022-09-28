@@ -1,16 +1,26 @@
 public class Polynomial
 {
-  double [] poly = {0};
+  double [] poly;
+  int [] degree;
   public Polynomial()
   {
-    double [] poly = {0};
+    poly = new double[100];
+    degree = new double[100];
+    poly[0] = 0;
+    degree[0] = 0;
   }
-  public Polynomial(double [] poly_arr)
+  public Polynomial(double [] poly_arr; double [] degree_arr)
   {
     int size = poly_arr.length;
     poly = new double[size];
+    int size2 = degree_arr.length;
     for(int i=0; i<size;i++)
+    {
+      if (i>=size2)
+
+    }
       poly[i] = poly_arr[i];
+
   }
   public Polynomial add(Polynomial second_poly)
   {
