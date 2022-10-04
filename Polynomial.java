@@ -95,6 +95,13 @@ public class Polynomial
           degree[index_place] = 0;
         index_place++;
       }
+      for(int i = 0; i < poly.length; i++)
+      {
+        if (poly[i] == 0)
+        {
+          degree[i] = 0;
+        }
+      }
     }
     catch (FileNotFoundException e)
     {
@@ -198,6 +205,11 @@ public class Polynomial
           result_poly[x] = 0;
         }
       }
+    }
+    for (int i = 0; i < result_poly.length; i++)
+    {
+      if(result_poly[i] == 0)
+        result_degree[i] = 0;
     }
     Polynomial return_poly = new Polynomial(result_poly, result_degree);
     return (return_poly);
